@@ -1,0 +1,14 @@
+name: crystal-rss
+version: 0.1.0
+
+authors:
+  - theansweris4ty2 <mdjd2001@gmail.com>
+
+targets:
+  crystal-rss:
+    main: src/crystal-rss.cr
+
+
+crystal: '>= 1.20.0'
+
+license: MIT

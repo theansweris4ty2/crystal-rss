@@ -1,18 +1,18 @@
 # crystal-rss
 
-TODO: Write a description here
+Simple Terminal RSS reader app written Crystal
 
 ## Installation
 
-TODO: Write installation instructions here
+If you have the Crystal compiler just download crystal-rss.cr and run shards build command, or download the exe. Create .config file and save url's you wish to pull feeds for. 
 
 ## Usage
 
-TODO: Write usage instructions here
+Open exe in terminal. Add or delete urls from the .config file. Ctr + click to activate links.
 
 ## Development
 
-TODO: Write development instructions here
+This is a work in progress. I am planning on adding a GUI, options for limiting the number of results from feeds, and organizing each feed. 
 
 ## Contributing
 

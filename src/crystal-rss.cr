@@ -6,14 +6,9 @@ require "colorize"
 
 
 
-feeds = [] of String
+
 File.each_line("feeds.config") do |line|
-    feeds << line
-end
-
-
-feeds.each do |feed|
-    response = HTTP::Client.get("#{feed}")
+    response = HTTP::Client.get("#{line}")
     xml_data = response.body
     document = XML.parse(xml_data)
     channel = document.xpath_nodes("//channel")
@@ -21,7 +16,7 @@ feeds.each do |feed|
         title = node.xpath_node("title").try(&.text).colorize(:blue).mode(:bright).mode(:Blink)
         puts "\t \t \t #{title} \n"
     end
-    items = document.xpath_nodes("//item")
+    items = document.xpath_nodes("//item").first(5)
     
 
     items.each do |node|
